@@ -38,13 +38,13 @@ jobs:
 
     runs-on: ${{ matrix.compiler.on }}
     env:
-      libraryName: dcmtk
-      cmakeInstallationPath: dcmtk-installation
-      tagName: DCMTK-3.6.7
+      libraryName: libONVIF
+      cmakeInstallationPath: libONVIF-installation
+      tagName: v2.0.1
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: DCMTK/dcmtk
+          repository: Tereius/libONVIF
           ref: ${{ env.tagName }}
           path: ${{ env.libraryName }}
           submodules: true
